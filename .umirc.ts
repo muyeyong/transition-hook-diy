@@ -10,6 +10,7 @@ export default defineConfig({
     { path: 'emoji', component: '@/pages/emoji'},
     { path: 'switch', component: '@/pages/switch'},
     { path: 'switchDiy', component: '@/pages/switchDiy'},
+    { path: 'list', component: '@/pages/list'},
   ],
   fastRefresh: {},
 });
