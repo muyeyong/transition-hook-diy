@@ -4,10 +4,13 @@ import useListTransitionDiy from '@/useListTransitionDiy'
 const List: FC = () => {
   const [list, setList] = useState<number[]>([])
   const keyRef = useRef<number>(0)
-  const transition = useListTransitionDiy({list, keyRef})
+  const transition = useListTransitionDiy({list, keyRef, time: 300})
   return (
-    <div style={{ display: 'flex' }}>
-      <Button onClick={() => setList(pre => pre.concat([keyRef.current++]))}>Add</Button>
+    <div style={{ display: 'flex', justifyContent: 'center',alignItems: 'center', flexDirection: 'column', marginTop: '50px' }}>
+      <Button 
+        onClick={() => setList(pre => pre.concat([keyRef.current++]))}
+        style={{margin: '10px'}}
+      >Add</Button>
       {
         transition((state, stage) => {
           return <p
